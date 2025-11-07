@@ -4,12 +4,10 @@ Debe imprimir los números por consola o por el DOM ordenados de mayor a menor, 
 Debe ser capaz de identificar si los números son iguales e imprimir un mensaje por consola o por el DOM diciendo que los números son iguales.
 Prueba tu programa con las siguientes entradas para asegurarte que funcione correctamente:
 Entradas: 
-4, 4, 2.*/
+4, 4, 2               4, 2, 4.*/
 
 
-/*Sin ..., si haces const copia = original;, copia apunta al mismo arreglo y si lo modificas, el original también cambia.
-Con ..., haces una copia independiente.
-También se usa para combinar arreglos: */
+
 
 const prompt = require("prompt-sync")();
 
@@ -20,7 +18,11 @@ const n3 = Number(prompt("Ingresa tu numero: "));
 
 const listaNumero = [n1, n2, n3]
 
-numerosAsc.sort((a, b) => a - b);    // orden ascendente a y b
-NnumerosDesc.sort((a, b) => b - a);   // orden descendente b y a
-console.log("Lista original de numeros: ", listaNumero)
-console.log("Lista original de numeros: ", listaNumero)
+
+
+
+const ascendente =  [...listaNumero].sort((a, b) => a - b);    // orden ascendente a y b  (... los puntos crean una copia para que no sobreescriba la lista original)
+const descendente = [...listaNumero].sort((a, b) => b - a);   // orden descendente b y a
+console.log("Lista original de numeros : ", ascendente)
+console.log("Lista de numeros ascendente : ", ascendente)
+console.log("Lista de numeros descendente: ", descendente)
