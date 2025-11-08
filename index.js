@@ -1,10 +1,3 @@
-/*Debe solicitar al usuario 3 números por prompt y guardarlos en sus respectivas variables.
-Debe analizar los números, identificar cual es el número mayor, el número del centro y el número menor.
-Debe imprimir los números por consola o por el DOM ordenados de mayor a menor, y de menor a mayor.
-Debe ser capaz de identificar si los números son iguales e imprimir un mensaje por consola o por el DOM diciendo que los números son iguales.
-Prueba tu programa con las siguientes entradas para asegurarte que funcione correctamente:
-Entradas: 4, 4, 2  --  4, 2, 4.  -- 2, 4, 4.*/
-
 const prompt = require("prompt-sync")();
 
 const n1 = Number(prompt("Ingresa tu numero: "));
@@ -19,7 +12,7 @@ let menor = listaNumero[0];
 if (n1 === n2 && n2 === n3){
     console.log("Todos son iguales:  ", n1)
 
-// comparacion para ver si son  iguales con operador or ||
+//* comparacion para ver si son  iguales con operador or ||
 }else if (n1 === n2 || n1 === n3 || n2 === n3) { 
     if (n1 === n2) console.log(`El numero ${n1} y El numero ${n2} son iguales`);
     if (n1 === n3 ) console.log(`El numero ${n1} y El numero ${n3} son iguales`);
@@ -27,14 +20,14 @@ if (n1 === n2 && n2 === n3){
        
     }
     
-    // aqui calculamos cual es el mayor y menor 
+// *aqui calculamos cual es el mayor y menor 
  for(let n of listaNumero){
         if (n > mayor) mayor = n;   //si es mayor actualizamos mayor con mayor = n
         if (n < menor) menor = n;  
  }
 
-
- let medio  = n1 + n2 + n3 - mayor - menor;    // aqui hacemo una operacio para calcular el del centro
+ // * aqui hacemo una operacio para calcular el del centro
+ let medio  = n1 + n2 + n3 - mayor - menor;    
 
 console.log("Soy el numero mayor: " , mayor)
 console.log("Soy el numero menor: ", menor)
