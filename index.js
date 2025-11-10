@@ -26,7 +26,7 @@ if (n1 === n2 && n2 === n3){
         if (n < menor) menor = n;  
  }
 
- // * aqui hacemo una operacio para calcular el del centro
+ // * aqui hacemos una operacion para calcular el del centro
  let medio  = n1 + n2 + n3 - mayor - menor;    
 
 console.log("Soy el numero mayor: " , mayor)

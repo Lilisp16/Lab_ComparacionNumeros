@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500&display=swap" rel="stylesheet">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <title>Lilis✨/> - Comparacion de Numeros</title>
+</head>
+
+<body class="bg-slate-900">
+
+<header>
+    <div id="logo-container"></div>
+    <h6 class="text-purple-500 font-bold text-sm mb-1">Lógica de Programación</h6>
+    <h1 class="text-white font-extrabold text-4xl md:text-5xl mb-6">Comparador de Numeros</h1>
+</header>
+
+
+<main class="container mx-auto flex flex-wrap justify-center gap-6 font-[Poppins] max-w-5xl">
+
+    <!-- tarjeta 1 grande -->
+    <div class="bg-gray-400/15 backdrop-blur-md rounded-xl p-6 shadow-lg w-[50%] flex flex-col min-h-[200px]">
+
+        <h3 class="text-gray-400 text-lg font-semibold flex items-center gap-2 mb-2">
+            <span>🔢</span> Ingresa 3 Números
+        </h3>
+        <input id="n1" type="number"
+            class="bg-transparent border-none text-cyan-300 placeholder-cyan-600 focus:outline-none" readonly>
+        <input id="n2" type="number"
+            class="bg-transparent border-none text-cyan-300 placeholder-cyan-600 focus:outline-none" readonly>
+        <input id="n3" type="number"
+            class="bg-transparent border-none text-cyan-300 placeholder-cyan-600 focus:outline-none" readonly>
+
+        <button id="ingresar"
+            class="mt-auto w-full px-4 py-2 bg-cyan-400 text-slate-900 font-bold rounded hover:bg-cyan-500 transition-colors">
+            Ingresar
+        </button>
+    </div>
+
+
+
+    <!--tarjeta 2  pequeña 30 %-->
+    <!--aqui se muestra el mensaje si todos los numeros son iguales-->
+    <div class="bg-gray-400/15 backdrop-blur-md rounded-xl p-6 shadow-lg w-[30%] min-h-[200px]">
+
+        <h2 class="text-gray-400 text-xl font-semibold flex items-center gap-2 mt-4">
+            <span>🔢</span> Entrada | Salida
+        </h2>
+        <div class="mensaje text-cyan-400 font-[Orbitron]"></div>
+        <!--lista de numeros-->
+        <div class="listaNumero" class="text-purple-400 text-lg">
+            <p id="listaOriginal" class="text-purple-400 text-lg"></p>
+            <p id="listaOrdenada" class="text-purple-400 text-lg"></p>
+        </div>
+    </div>
+    </div>
+
+
+        <!--tarjeta 3  pequeña 30 %-->
+    <div class="bg-gray-400/15 backdrop-blur-md rounded-xl p-6 shadow-lg w-[30%] min-h-[200px]">
+        <h3 id="ayudaTitulo" class="text-white/80 font-semibold mb-2 cursor-pointer select-none">💡 ¿Necesitas
+            ayuda?</h3>
+
+        <ul id="ayudaContenido" class="list-disc list-inside text-white/70 text-sm hidden">
+            <li>Ingresa 3 números usando el botón de arriba.</li>
+            <li>Verás tu lista original y también ordenada en <strong>ascendente</strong> y
+                <strong>descendente</strong>.</li>
+            <li>El programa mostrará el número mayor, menor y el del medio.</li>
+        </ul>
+    </div>
+
+    <script>
+        const titulo = document.getElementById('ayudaTitulo');
+        const contenido = document.getElementById('ayudaContenido');
+
+        titulo.addEventListener('click', () => {
+            contenido.classList.toggle('hidden'); // alterna mostrar/ocultar
+        });
+    </script>
+
+
+
+
+    <!--tarjeta 4  grande 70 %-->
+    <div class="bg-gray-400/15 backdrop-blur-md rounded-xl p-6 shadow-lg w-[50%] min-h-[200px]">
+
+        <h2 class="text-gray-400 text-xl font-semibold flex items-center gap-2 mt-4">
+            <span>🔢</span> Mayor | Centro | Menor
+        </h2>
+
+        <div class="resultadoMMM">
+            <p id="mayor" class="text-purple-400 text-lg"></p>
+            <p id="medio" class="text-purple-400 text-lg"></p>
+            <p id="menor" class="text-purple-400 text-lg"></p>
+        </div>
+    </div>
+
+</main>
+
+
+
+<footer class="text-white text-center py-4 bg-slate-900">
+    <small>© Todos los derechos reservados by Lili S.</small>
+</footer>
+
+<script src="App.js"></script>
+<script src="script.js"></script>
+<script src="marca.js"></script>
+
+
+</body>
+</html>
